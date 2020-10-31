@@ -1,57 +1,59 @@
-아래의 **샘플 양식은 필수**입니다.
-설명이 부족하거나 추가하고싶은 부분이 있으면 개발자님이 추가해서 작성해주세요!
-동영상, 이미지, 텍스트 전부 자유입니다.
+# 전달, 전달, 점호 5분전
+![Logo](./images/Banner.png)
 
-[https://github.com/osam2019](https://github.com/osam2019)
-**2019프로젝트, readme.md를 참고하여 개발자님의 새로운 프로젝트를 만들어주세요!**
+* App 저장소: https://github.com/osamhack2020/App_5MinsUntilRollCall_CorrectButWhyWA
+* IoT 저장소: https://github.com/osamhack2020/IoT_5MinsUntilRollCall_CorrectButWhyWA
+* Web 저장소: https://github.com/osamhack2020/Web_5MinsUntilRollCall_CorrectButWhyWA
 
-# Smaple Logo
-![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)
+## 프로젝트 설명 (Project Description)
+**비대면 스마트폰 반납** 및 **비대면 점호**를 목표로 하는 프로젝트입니다. 스마트폰의 **생체인식 기술**과 **모바일 신분증 기술**을 활용하였습니다.
 
-팀명 텍스트 및 팀명 로고 이미지 **(택1)**
+### 프로젝트 구성요소
+당직사관이 직접 확인할 필요 없이, 개인적으로 생활관 복도에 나와 스마트폰을 반납하고 인원체크를 할 수 있는 시스템을 만드는 것이 목표입니다. 아이템의 구성요소는 3가지가 있습니다.
 
-## 팀소개 및 프로잭트 설명 동영상
-[![Watch the video](https://img.youtube.com/vi/LjX3eVQdIyk/0.jpg)](https://www.youtube.com/watch?time_continue=117&v=LjX3eVQdIyk)
+1. **스마트폰 인증 앱**. 병사는 등록된 자신의 스마트폰에 이 앱을 설치합니다. 이 앱은 병사의 인적정보와 당일 점호 정보(재실, 야간근무 등)를 포함하는 QR코드 OTP를 생성하여 화면에 띄웁니다.
 
-## 기능 설계
- -  발사믹, 카카오 오븐 등 본인이 편한 목업 프레임워크를 이용하여 제작 후 링크 
- - 수기로 작성시 찍어서 올려주세요
+2. **스마트폰 보관 상자**. 병사의 스마트폰을 보관하고, 아래의 인증기와 연동되어 잠금 및 잠금 해제되는 상자입니다. 스마트폰을 반납할 때, 병사는 QR코드 OTP를 띄운 채로 스마트폰을 상자에 넣습니다. 이 상자를 인증기에 연결시키면 QR코드를 확인한 후에 상자가 잠깁니다. 스마트폰을 꺼낼 때에는 별도의 작업 없이 인증기에 상자를 연결시키면 됩니다. 인증기가 규정에 따라 스마트폰을 꺼낼 수 있는 시간대인지 여부를 확인한 다음 상자의 잠금을 해제합니다.
+
+3. **인증기**. 각 호실 혹은 각 층 복도에 비치 될 기기입니다. QR코드 스캐너와 상자 제어장치로 구성되어 있습니다. 병사가 스마트폰을 보관할 때에는 상자에 담겨있는 스마트폰의 QR코드를 스캔하여 상자를 잠그고, 스마트폰을 꺼낼 때에는 시간대를 확인한 후에 잠금을 해제합니다. 또한 스캔한 QR코드 정보를 통해 각 병사의 점호 정보를 갱신하고, 당직사관이나 당직병이 확인할 수 있도록 정리합니다.
+
+## 블록 다이어그램 (Block Diagram)
+![Block Diagram](./images/Block_Diagram.jpg)
+
+## 기능 설계 (Design)
+### App
+![](./images/AppPreview.png)
+- Adobe XD 사용
+
+### IoT
+![](./images/BoxUp.png)
+![](./images/Device.png)
+- TinkerCAD 사용
+
+### Web
+![](./images/Web2.png)
+![](./images/Web4.png)
+
+## 자세한 문서 (Document for More Information)
+https://daddy321.gitbook.io/5minsuntilrollcall/
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
-* ECMAScript 6 지원 브라우저 사용
-* 권장: Google Chrome 버젼 77 이상
+### Web
+- Node.js v12.16.3
+- MySQL v15.1
+- ECMAScript 6 지원 브라우저 사용
+- 권장: Google Chrome 버전 77+
 
-## 기술 스택 (Technique Used) (예시)
-### Server(back-end)
- -  nodejs, php, java 등 서버 언어 버전 
- - express, laravel, sptring boot 등 사용한 프레임워크 
- - DB 등 사용한 다른 프로그램 
- 
-### front-end
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
- - 기타 사용한 라이브러리
+### App
+- React Native v0.63.3
+- Android SDK 28+ (Android 9+)
 
-## 설치 안내 (Installation Process)
-```bash
-$ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
-```
-
-## 프로젝트 사용법 (Getting Started)
-**마크다운 문법을 이용하여 자유롭게 기재**
-
-잘 모를 경우
-구글 검색 - 마크다운 문법
-[https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017](https://post.naver.com/viewer/postView.nhn?volumeNo=24627214&memberNo=42458017)
-
- 편한 마크다운 에디터를 찾아서 사용
- 샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
+### IoT
+- Arduino Uno R3
  
 ## 팀 정보 (Team Information)
-- hong gil dong (hong999@gmail.com), Github Id: gildong999
-- kim su ji (suji999@gmail.com), Github Id: suji999
+- Young In Kim (daddy4321@naver.com), Github Id: Young-in
+- Jun Ho Kim (ploffer11@naver.com), Github Id: ploffer11
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
- * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
+ * [MIT](https://github.com/osamhack2020/App_5MinsUntilRollCall_CorrectButWhyWA/blob/master/license.md)
